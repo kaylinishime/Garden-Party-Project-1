@@ -1,0 +1,56 @@
+.veggie {
+  height: 40px;
+  width: 40px;
+  display:inline-block;
+  margin-left: 26px;
+  margin-bottom: 20px;
+
+}
+
+#land {
+  margin-left: 250px;
+  margin-right: auto;
+  width: 400px;
+  display: inline-block;
+  float: left;
+}
+
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+
+}
+
+#sideDiv {
+  display:inline-block;
+  float: right;
+  border: 1px solid;
+  width: 350px;
+  height: 500px;
+  margin-right: 100px;
+}
+
+#clock {
+ width: 350px;
+ height: 150px;
+ border: 1px solid;
+
+}
+
+#score {
+
+}
+
+#bottomDiv {
+  clear:left;
+}
+
+h1 {
+  text-align: center;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
