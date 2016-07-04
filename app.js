@@ -48,10 +48,26 @@ var veggies = [ apple, avocado, strawberry, watermelon, watermelon, strawberry, 
 
 
 document.addEventListener("click", function(evt){
-var x =  evt.target;
-console.log(x);
-  if (evt.detail === 3 && evt.target.src === apple) {
-    console.log("clicked")
-    }
+  if (evt.detail === 1 && evt.target.src === apple) {
+    $( evt.target ).hide( 500, function() {
+    $( evt.target ).remove();
+    console.log("clicked");
   })
+}
+  else if (evt.detail === 2 && evt.target.src === strawberry) {
+      $( evt.target ).hide( 500, function() {
+      $( evt.target ).remove();
+    })
+  }
+  else if (evt.detail === 3 && evt.target.src === avocado) {
+        $( evt.target ).hide( 500, function() {
+        $( evt.target ).remove();
+      })
+    }
+  else if (evt.detail === 4 && evt.target.src === watermelon) {
+        $( evt.target ).hide( 500, function() {
+        $( evt.target ).remove();
+      })
+      }
   });
+})
