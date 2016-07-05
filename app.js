@@ -1,7 +1,3 @@
-// = $('<img src="http://imgur.com/xuboL0V">');
-//  $('<img src="http://imgur.com/q6fYImz">');
-// = $('<img src="http://imgur.com/rD1QSOV">');
-// $('<img src="http://imgur.com/HFzBWKc">');
 
 console.log("jqeury connected");
 $(document).ready(function(){
@@ -45,29 +41,42 @@ var veggies = [ apple, avocado, strawberry, watermelon, watermelon, strawberry, 
 
   farm();
 
+  var score = 0;
+
 
 
 document.addEventListener("click", function(evt){
   if (evt.detail === 1 && evt.target.src === apple) {
-    $( evt.target ).hide( 500, function() {
-    $( evt.target ).remove();
-    console.log("clicked");
-  })
-}
+     $( evt.target ).hide( 500, function() {
+     $( evt.target ).remove();
+     score = score + 1;
+     console.log(score);
+     $('#scorePoints').text(score);
+   })
+   }
   else if (evt.detail === 2 && evt.target.src === strawberry) {
       $( evt.target ).hide( 500, function() {
       $( evt.target ).remove();
+      score = score + 2;
+      console.log(score);
+      $('#scorePoints').text(score);
     })
   }
   else if (evt.detail === 3 && evt.target.src === avocado) {
-        $( evt.target ).hide( 500, function() {
-        $( evt.target ).remove();
+      $( evt.target ).hide( 500, function() {
+      $( evt.target ).remove();
+      score = score + 3;
+      console.log(score);
+      $('#scorePoints').text(score);
       })
     }
-  else if (evt.detail === 4 && evt.target.src === watermelon) {
-        $( evt.target ).hide( 500, function() {
-        $( evt.target ).remove();
-      })
-      }
+ else if (evt.detail === 4 && evt.target.src === watermelon) {
+      $( evt.target ).hide( 500, function() {
+      $( evt.target ).remove();
+      score = score + 4;
+      console.log(score);
+      $('#scorePoints').text(score);
+     })
+    }
   });
 })

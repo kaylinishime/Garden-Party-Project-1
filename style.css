@@ -12,11 +12,15 @@ body {
 }
 
 #land {
-  margin-left: 250px;
+  margin-left: 100px;
   margin-right: auto;
-  width: 400px;
+  width: 550px;
   display: inline-block;
   float: left;
+}
+
+div {
+  display: inline;
 }
 
 .row {
@@ -27,7 +31,7 @@ body {
 }
 
 #sideDiv {
-  display:inline-block;
+  display:block;
   float: right;
   border: 1px solid;
   width: 350px;
@@ -37,12 +41,17 @@ body {
 
 #clock {
  width: 350px;
- height: 150px;
+ height: 200px;
  border: 1px solid;
+ display: block;
+ text-align: center;
 
 }
 
 #score {
+  text-align: center;
+  font-size: 30px;
+  display: block;
 
 }
 
@@ -55,6 +64,8 @@ body {
 
 h1 {
   text-align: center;
+  font-size: 80px;
+  color: green;
 }
 
 img {
@@ -69,4 +80,9 @@ button {
   margin-right: auto;
   display: block;
 
+}
+
+#scorePoints {
+  margin-top: 10px;
+  font-size: 90px;
 }
