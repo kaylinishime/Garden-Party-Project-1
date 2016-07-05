@@ -4,28 +4,27 @@ $(document).ready(function(){
 
 
 
+//randomizes veggetables on farmland
 
   var apple = "http://i.imgur.com/xuboL0V.jpg";
   var avocado = "http://i.imgur.com/q6fYImz.jpg";
   var strawberry = "http://i.imgur.com/u7GvQkK.jpg";
   var snail = "http://i.imgur.com/XI5oAX7.jpg";
   var watermelon = "http://i.imgur.com/d3BVON7.jpg";
+
   var objs = [apple,avocado,strawberry,watermelon,snail];
   var test = [];
-  for(var i = 1; i<= 80; i++){
+
+  for(var i = 0; i<= 80; i++){
     test.push(objs[Math.ceil(Math.random()*10) % 5]);
   }
 
   function farm() {
-    console.log(test);
     $('.image').each(function (i) {
       $(this).append('<img src=' + test[i] + ' class="veggies" />');
-    });
-  }
-    farm();
-
-
-
+      });
+    }
+  farm();
 
 
 //Score point logic, how many points per crop clicked
@@ -72,11 +71,14 @@ function startTimer(duration, display) {
       }, 1000);
 }
 
+var oneMinute = 60 * 1,
+display = $('.timer');
 
-
-    var oneMinute = 60 * 1,
-    display = $('.timer');
+$('i').on("click", function() {
     startTimer(oneMinute, display);
+
+});
+
 });
 
 
