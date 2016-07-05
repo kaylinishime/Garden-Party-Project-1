@@ -33,18 +33,19 @@ div {
 #sideDiv {
   display:block;
   float: right;
-  border: 1px solid;
+  border: 1px solid white;;
   width: 350px;
-  height: 400px;
+  height: 420px;
   margin-right: 100px;
 }
 
 #clock {
  width: 350px;
  height: 200px;
- border: 1px solid;
  display: block;
  text-align: center;
+ margin-top: 20px;
+ font-size: 30px;
 
 }
 
@@ -52,6 +53,7 @@ div {
   text-align: center;
   font-size: 30px;
   display: block;
+  margin-top: 20px;
 
 }
 
