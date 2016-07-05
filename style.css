@@ -1,3 +1,7 @@
+#gameTitle {
+
+}
+
 body {
   background-image: url("http://i.imgur.com/38foBGQ.jpg");
   background-repeat: no-repeat;
@@ -9,6 +13,9 @@ body {
 
 }
 
+.veggies {
+  cursor: pointer;
+}
 
 
 #land {
@@ -24,6 +31,7 @@ body {
   padding: 20px;
 }
 
+/*TODO make this a class instead */
 div {
   display: inline;
 }
@@ -72,6 +80,7 @@ div {
   height: 400px;
 }
 
+/*make this a class*/
 h1 {
   text-align: center;
   font-size: 90px;
@@ -81,11 +90,12 @@ h1 {
   opacity: .7;
 }
 
+/*make this a class*/
 img {
   width: 50px;
   height: 50px;
 }
-
+/* make a class */
 button {
   width: 120px;
   height: 40px;
