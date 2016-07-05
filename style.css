@@ -40,7 +40,7 @@ div {
   float: right;
   border: 1px solid white;;
   width: 350px;
-  height: 420px;
+  height: 490px;
   margin-right: 100px;
   background-color: white;
   opacity: .8;
@@ -92,10 +92,16 @@ button {
   margin-left: 350px;
   margin-right: auto;
   display: block;
+  margin-top: 30px;
+  margin-left: 250px;
 
 }
 
 #scorePoints {
   margin-top: 10px;
   font-size: 90px;
+}
+
+.timer {
+  font-size: 100px;
 }
