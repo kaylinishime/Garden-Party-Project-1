@@ -8,8 +8,9 @@ var apple = "http://i.imgur.com/xuboL0V.jpg";
 var avocado = "http://i.imgur.com/q6fYImz.jpg";
 var strawberry = "http://i.imgur.com/q6fYImz.jpg";
 var watermelon = "http://i.imgur.com/HFzBWKc.jpg";
+var snail = "http://i.imgur.com/XI5oAX7.jpg";
 
-var veggies = [ apple, avocado, strawberry, watermelon, watermelon, strawberry, avocado, strawberry, watermelon, apple, avocado, apple, watermelon, strawberry, avocado, apple, apple, watermelon, apple, strawberry, avocado, watermelon, strawberry, apple, avocado, apple, watermelon, watermelon, apple, strawberry, avocado ];
+var veggies = [ apple, avocado, strawberry, watermelon, watermelon, snail, strawberry, avocado, strawberry, watermelon, snail, apple, avocado, snail, apple, watermelon, strawberry, snail, avocado, apple, apple, watermelon, apple, strawberry, avocado, snail, watermelon, strawberry, apple, avocado, apple, snail, watermelon, watermelon, apple, strawberry, avocado ];
 
 
 
@@ -54,6 +55,14 @@ document.addEventListener("click", function(evt){
      $('#scorePoints').text(score);
    })
    }
+  else if (evt.detail === 1 && evt.target.src === snail){
+    $( evt.target ).hide( 500, function() {
+    $( evt.target ).remove();
+    score = score - 2;
+    console.log(score);
+    $('#scorePoints').text(score);
+  })
+  }
   else if (evt.detail === 2 && evt.target.src === strawberry) {
       $( evt.target ).hide( 500, function() {
       $( evt.target ).remove();
