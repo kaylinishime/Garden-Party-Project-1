@@ -1,9 +1,4 @@
-#gameTitle {
-  width: 500px;
-  height: 200px;
-  background-color: white;
 
-}
 
 body {
   background-image: url("http://i.imgur.com/38foBGQ.jpg");
@@ -20,7 +15,16 @@ body {
   margin-right: auto;
 }
 
-.crops {
+.noSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.picGuide {
   width: 30px;
   height: 30px;
   opacity: .7;
@@ -29,6 +33,8 @@ body {
 
 .veggies {
   cursor: pointer;
+  width: 50px;
+  height: 50px;
 }
 
 
@@ -45,16 +51,8 @@ body {
   padding: 20px;
 }
 
-/*TODO make this a class instead */
-div {
+div.noSelect {
   display: inline;
-}
-
-.row {
-  margin-left: auto;
-  margin-right: auto;
-  display: inline-block;
-
 }
 
 #sideDiv {
@@ -76,7 +74,6 @@ div {
  text-align: center;
  margin-top: 20px;
  font-size: 30px;
-
 }
 
 #score {
@@ -84,18 +81,10 @@ div {
   font-size: 30px;
   display: block;
   margin-top: 20px;
-
 }
 
-#bottomDiv {
-  clear:left;
-  display: inline-block;
-  width: 350px;
-  height: 400px;
-}
 
-/*make this a class*/
-h1 {
+.title {
   text-align: center;
   font-size: 90px;
   color: black;
@@ -104,22 +93,6 @@ h1 {
   opacity: .7;
 }
 
-/*make this a class*/
-img {
-  width: 50px;
-  height: 50px;
-}
-/* make a class */
-button {
-  width: 120px;
-  height: 40px;
-  margin-left: 350px;
-  margin-right: auto;
-  display: block;
-  margin-top: 30px;
-  margin-left: 250px;
-
-}
 
 #scorePoints {
   margin-top: 10px;
@@ -130,7 +103,7 @@ button {
   font-size: 100px;
 }
 
-#popupOne{
+#popupOne, #popupTwo, #popupThree, .restartOne{
   position:absolute;
   left:15%;
   top: 20%;
@@ -141,55 +114,7 @@ button {
   padding: 10px;
   text-align: center;
 }
-
-#popupTwo{
-  position:absolute;
-  left:15%;
-  top: 20%;
-  width: 800px;
-  height:200px;
-  background:white;
-  opacity:0.9;
-  padding: 10px;
-  text-align: center;
-}
-
-#popupThree{
-  position:absolute;
-  left:15%;
-  top: 20%;
-  width: 800px;
-  height:200px;
-  background:white;
-  opacity:0.9;
-  padding: 10px;
-  text-align: center;
-}
-
-
-.restartOne{
-  position:absolute;
-  left:15%;
-  top: 20%;
-  width: 800px;
-  height:200px;
-  background:white;
-  opacity:0.9;
-  padding: 10px;
-  text-align: center;
-
-}
-
 
 .fa-remove:before, .fa-close:before, .fa-times:before {
 margin-left: 400px;
-}
-
-.noSelect {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }

@@ -3,28 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Garden Party!</title>
-
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link href='https://fonts.googleapis.com/css?family=Bungee+Shade' rel='stylesheet' type='text/css'>
   <script src="https://code.jquery.com/jquery-2.1.3.js" type='text/javascript'></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
-
-
 </head>
 
 <body>
-
-  <h1>Garden Party!</h1>
-
+  <h1 class="title">Garden Party!</h1>
   <div class="col-md-12">
-      <img src="http://i.imgur.com/xuboL0V.jpg" class="crops"> = 1</img> <!--apple-->
-      <img src="http://i.imgur.com/XI5oAX7.jpg" class="crops"> = 2</img><!--snail-->
-      <img src="http://i.imgur.com/q6fYImz.jpg" class="crops"> = 3</img><!--avocado-->
-      <img src="http://i.imgur.com/d3BVON7.jpg" class="crops"> = 4</img><!--watermelon-->
-      <img src="http://i.imgur.com/u7GvQkK.jpg" class="crops"> = 5</img><!--strawberry-->
+      <img src="http://i.imgur.com/xuboL0V.jpg" class="picGuide"> = 1</img> <!--apple-->
+      <img src="http://i.imgur.com/XI5oAX7.jpg" class="picGuide"> = 2</img><!--snail-->
+      <img src="http://i.imgur.com/q6fYImz.jpg" class="picGuide"> = 3</img><!--avocado-->
+      <img src="http://i.imgur.com/d3BVON7.jpg" class="picGuide"> = 4</img><!--watermelon-->
+      <img src="http://i.imgur.com/u7GvQkK.jpg" class="picGuide"> = 5</img><!--strawberry-->
   </div>
-
 
   <div id="land" class="noSelect" class ="col-md-6">
     <div class="noSelect">
@@ -119,7 +113,6 @@
       <span class="image"></span>
       <span class="image"></span>
       <span class="image"></span>
-
     </div>
   </div><!-- #land -->
 
@@ -135,10 +128,10 @@
     </div>
   </div>
 
-  <!-- TODO could use footer element -->
 
 
-<!--pop up level windows-->
+
+<!--level one window-->
 <div id="popupOne">
   <i id="first" class="fa fa-3x fa-times top-right" aria-hidden="true"></i>
     <h2>Level 1: </h2>
@@ -146,6 +139,7 @@
       <p> Time: 1 min</p>
 </div>
 
+<!--level two window -->
 <div id="popupTwo" style="display: none;">
   <i id="second" class="fa fa-3x fa-times top-right" aria-hidden="true"></i>
     <h2>Level 2: </h2>
@@ -153,20 +147,24 @@
       <p> Time: 1 min</p>
 </div>
 
+<!--level three window -->
 <div id="popupThree" style="display: none;">
   <i id="third" class="fa fa-3x fa-times top-right" aria-hidden="true"></i>
     <h2>Level 3: </h2>
       <p>Score 300 pts</p>
       <p> Time: 1 min</p>
 </div>
-<!--restart window if player loses-->
+
+<!--restart window-->
 <div class="restartOne" style="display: none;">
   <i id="restart" class="fa fa-3x fa-times top-right" aria-hidden="true"></i>
     <h2>Try again? </h2>
 </div>
 
-  <script src="gameMain.js" type="text/javascript"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
+
+<script src="gameMain.js" type="text/javascript"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </body>
+
 </html>
