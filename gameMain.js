@@ -82,6 +82,12 @@ function startTimer(duration, display) {
           clearInterval(interval);
           winLevelTwo();
         }
+        else if (score === 268 && level === "two"){
+          console.log("You win!");
+          timer = 0;
+          clearInterval(interval);
+          winLevelThree();
+        }
         //
         // else if (score === 5) {
         //   console.log("You win!");
@@ -131,6 +137,14 @@ $('#second').click(function() {
 }
 
 function winLevelTwo() {
+$('#popupThree').show();
+$('#third').click(function() {
+  $('#popupThree').hide();
+  startTimer(60, display);
+});
+}
+
+function winLevelThree() {
 $('#popupThree').show();
 $('#third').click(function() {
   $('#popupThree').hide();
