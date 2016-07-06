@@ -3,6 +3,7 @@ console.log("jqeury connected");
 $(document).ready(function(){
 
 
+  var level;
 
 //randomizes veggetables on farmland
   var apple = "http://i.imgur.com/xuboL0V.jpg";
@@ -14,16 +15,23 @@ $(document).ready(function(){
   var test = [];
 
 //randomize veggies and place them in an empty array which makes the new land
-  for(var i = 0; i<= 80; i++) {
-    test.push(objs[Math.ceil(Math.random()*10) % 5]);
-  }
 
   function farm() {
+    for(var i = 0; i<= 80; i++) {
+      test.push(objs[Math.ceil(Math.random()*10) % 5]);
+    }
+
     $('.image').each(function (i) {
       $(this).append('<img src=' + test[i] + ' class="veggies" />');
       });
     }
-  farm();
+
+    function resetLand(){
+      $('.image').each(function (i) {
+        $(this).text("");
+        });
+    }
+
 
 
 //Score point logic, how many points per crop clicked
@@ -76,7 +84,13 @@ function startTimer(duration, display) {
           clearInterval(interval);
           winLevelOne();
         }
-        else if (score === 200 && level === "two"){
+        else if (score > 100 && level === "one"){
+          clearInterval(interval);
+          score = 0;
+          youLose();
+        }
+
+        if (score === 200 && level === "two"){
           console.log("You win!");
           timer = 0;
           clearInterval(interval);
@@ -116,12 +130,12 @@ display = $('.timer');
 
 
 //popup window before game starts - level 1
-var level;
 
 $('#first').click(function() {
   $('#popupOne').hide();
   startTimer(60, display);
   level = "one";
+  farm();
 });
 
 //popup window - level 2
@@ -129,6 +143,7 @@ function winLevelOne() {
 $('#popupTwo').show();
 $('#second').click(function() {
   $('#popupTwo').hide();
+  test = [];
   startTimer(60, display);
   level = "two";
   score = 0;
@@ -156,6 +171,9 @@ function youLose(){
 $('.restartOne').show();
 $('#restart').click(function(){
   $('.restartOne').hide();
+  test =[];
+  resetLand();
+  farm();
   startTimer(60, display);
   console.log(startTimer);
 })
@@ -170,8 +188,3 @@ var targetScore = {
 
 
 });
-
-
-
-
-///win lose logic
