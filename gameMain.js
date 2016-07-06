@@ -70,18 +70,32 @@ function startTimer(duration, display) {
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
         display.text(minutes + ":" + seconds);
-        if (score === 100) {
+        if (score === 100 && level === "one"){
           console.log("You win!");
           timer = 0;
           clearInterval(interval);
+          winLevelOne();
         }
+        else if (score === 200 && level === "two"){
+          console.log("You win!");
+          timer = 0;
+          clearInterval(interval);
+          winLevelTwo();
+        }
+        //
+        // else if (score === 5) {
+        //   console.log("You win!");
+        //   timer = 0;
+        //   clearInterval(interval);
+        //   winLevelTwo();
+        // }
 
 
       if (--timer < 0) {
         timer = 0;
-        if (score === targetScore.levelOne){
+        if (score === targetScore.levelOne && level === "one"){
           console.log("You win!");
-        } else if (score !== targetScore.levelOne){
+        } else if (score !== targetScore.levelOne && level === "one"){
           console.log ("You lose!");
           clearInterval(interval);
           youLose();
@@ -96,39 +110,53 @@ display = $('.timer');
 
 
 //popup window before game starts - level 1
+var level;
+
 $('#first').click(function() {
-  $('.popupOne').hide();
-  startTimer(10, display);
+  $('#popupOne').hide();
+  startTimer(60, display);
+  level = "one";
 });
+
+//popup window - level 2
+function winLevelOne() {
+$('#popupTwo').show();
+$('#second').click(function() {
+  $('#popupTwo').hide();
+  startTimer(60, display);
+  level = "two";
+  score = 0;
+  farm();
+});
+}
+
+function winLevelTwo() {
+$('#popupThree').show();
+$('#third').click(function() {
+  $('#popupThree').hide();
+  startTimer(60, display);
+});
+}
 
 function youLose(){
 $('.restartOne').show();
 $('#restart').click(function(){
   $('.restartOne').hide();
-  startTimer(10, display);
+  startTimer(60, display);
   console.log(startTimer);
 })
 }
 
 
-
-
-
 var targetScore = {
   levelOne: 100,
-  levelTwo: 250,
+  levelTwo: 5,
   levelThree: 300
 }
 
 
 });
 
-
-//   do {
-//    $('.restartOne').show();
-//    console.log("You lose");
-//  }
-// while ((timer === 0) && (score > 100 || score < 100)) ;
 
 
 
