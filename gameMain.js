@@ -43,7 +43,6 @@ $('#land').on("click", "span", function(evt){
   if (evt.target.src === apple) {
     score = score + 1;
   } else if (evt.target.src === snail) {
-    console.log(snail,evt);
     score = score + 2;
   } else if (evt.target.src === strawberry) {
     score = score + 5;
