@@ -5,17 +5,16 @@ $(document).ready(function(){
 
 
 //randomizes veggetables on farmland
-
   var apple = "http://i.imgur.com/xuboL0V.jpg";
   var avocado = "http://i.imgur.com/q6fYImz.jpg";
   var strawberry = "http://i.imgur.com/u7GvQkK.jpg";
   var snail = "http://i.imgur.com/XI5oAX7.jpg";
   var watermelon = "http://i.imgur.com/d3BVON7.jpg";
-
   var objs = [apple,avocado,strawberry,watermelon,snail];
   var test = [];
 
-  for(var i = 0; i<= 80; i++){
+//randomize veggies and place them in an empty array which makes the new land
+  for(var i = 0; i<= 80; i++) {
     test.push(objs[Math.ceil(Math.random()*10) % 5]);
   }
 
@@ -39,24 +38,31 @@ $('#land').on("click", "span", function(evt){
     console.log(snail,evt);
     score = score + 2;
   } else if (evt.target.src === strawberry) {
-    score = score + 2;
+    score = score + 5;
   } else if (evt.target.src === avocado) {
     score = score + 3;
   } else if (evt.target.src === watermelon) {
    score = score + 4;
  } else {
    console.log('no match');
- }
- $( evt.target ).hide( 500, function() {
-   $( evt.target ).remove();
-   console.log(score);
-   $('#scorePoints').text(score);
+ };
+
+$( evt.target ).hide( 500, function() {
+  $( evt.target ).remove();
+  console.log(score);
+  console.log($('#scorePoints').text(score)); //displays the current score
  });
 });
 
+//Clock countdown
+var timer;
+var minutes;
+var seconds;
+
 function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
+   timer = duration, minutes, seconds;
+
+   var interval = setInterval(function () {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
 
@@ -64,32 +70,66 @@ function startTimer(duration, display) {
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
         display.text(minutes + ":" + seconds);
-
-        if (--timer < 0) {
+        if (score === 100) {
+          console.log("You win!");
           timer = 0;
+          clearInterval(interval);
+        }
+
+
+      if (--timer < 0) {
+        timer = 0;
+        if (score === targetScore.levelOne){
+          console.log("You win!");
+        } else if (score !== targetScore.levelOne){
+          console.log ("You lose!");
+          clearInterval(interval);
+          youLose();
+          };
         }
       }, 1000);
-}
+};
 
-var oneMinute = 60 * 1,
+var oneMinute = 60,
 display = $('.timer');
 
-$('i').on("click", function() {
-    startTimer(oneMinute, display);
+
+
+//popup window before game starts - level 1
+$('#first').click(function() {
+  $('.popupOne').hide();
+  startTimer(10, display);
+});
+
+function youLose(){
+$('.restartOne').show();
+$('#restart').click(function(){
+  $('.restartOne').hide();
+  startTimer(10, display);
+  console.log(startTimer);
+})
+}
+
+
+
+
+
+var targetScore = {
+  levelOne: 100,
+  levelTwo: 250,
+  levelThree: 300
+}
+
 
 });
 
-});
+
+//   do {
+//    $('.restartOne').show();
+//    console.log("You lose");
+//  }
+// while ((timer === 0) && (score > 100 || score < 100)) ;
 
 
-//When time stops, player should not be able to click on any items for points
-// function stopTime(){
-//
-// }
 
-//additional things to add:
-//when item is clicked, show quick popup of points earned or lost (1, 2, 3, 4, or -1)
-//start window/alert window "Player 1 ready?" and can click to start (move to main window)
-//restart game, window for "Player 2 ready?
-//third window, displays player 1 & player 2 points, declares winner
-//need to write instructions/click values on the bottom, &start window
+///win lose logic
