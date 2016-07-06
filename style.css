@@ -12,7 +12,19 @@ body {
   background-size: 1300px;
   background-position: center;
   background-attachment: fixed;
+}
 
+.col-md-12 {
+  margin-left: 26%;
+  margin-top: 2%;
+  margin-right: auto;
+}
+
+.crops {
+  width: 30px;
+  height: 30px;
+  opacity: .7;
+  margin-left: 50px;
 }
 
 .veggies {
@@ -23,12 +35,12 @@ body {
 #land {
   margin-left: 120px;
   margin-right: auto;
-  margin-top: 50px;
+  margin-top: 30px;
   width: 550px;
+  height: 480px;
   display: inline-block;
   float: left;
   background-color: white;
-
   opacity: .8;
   padding: 20px;
 }
@@ -50,11 +62,11 @@ div {
   float: right;
   border: 1px solid white;;
   width: 350px;
-  height: 490px;
+  height: 480px;
   margin-right: 100px;
   background-color: white;
   opacity: .8;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 #clock {
