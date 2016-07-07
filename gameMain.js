@@ -1,6 +1,6 @@
 
 console.log("jqeury connected");
-$(document).ready(function(){
+// $(document).ready(function(){
 
 
 var level;
@@ -73,217 +73,202 @@ var minutes;
 var seconds;
 var interval;
 
-function startTimer(duration, display) {
-   timer = duration, minutes, seconds;
 
-   var interval = setInterval(function () {
-      minutes = parseInt(timer / 60, 10);
-      seconds = parseInt(timer % 60, 10);
-
-      minutes = minutes < 10 ? "0" + minutes : minutes;
-      seconds = seconds < 10 ? "0" + seconds : seconds;
-
-      display.text(minutes + ":" + seconds);
-        if (score === 104 && level === "one"){
-           winLevelOne();
-        } else if (score > 104 && level === "one"){
-           youLose();
-        } if (score === 168 && level === "two"){
-           winLevelTwo();
-        } else if (score > 168 && level === "two"){
-           youLose();
-        } if (score === 201 && level === "three"){
-           winLevelThree();
-        } else if (score > 201 && level === "three"){
-           youLose();
-        } if (score === 142 && level === "four"){
-           winLevelFour();
-        } else if (score > 142 && level === "four"){
-           youLose();
-        } if (score === 179 && level === "five"){
-           winLevelFive();
-        } else if (score > 179 && level === "five"){
-           youLose();
-        } if (score === 195 && level === "six"){
-           winLevelSix();
-        } else if (score > 195 && level === "six"){
-          youLose();
-        } if (score === 209 && level === "seven"){
-           winLevelSeven();
-        } else if (score > 209 && level === "seven"){
-           youLose();
-        }
-
-      if (--timer < 0) {
-        timer = 0;
-        if (score === targetScore.levelOne && level === "one"){
-            clearInterval(interval);
-            winLevelOne();
-        } else if (score !== targetScore.levelOne && level === "one"){
-            clearInterval(interval);
-            youLose();
-        } if (score === targetScore.levelTwo && level === "two"){
-            clearInterval(interval);
-            winLevelTwo();
-        } else if (score !== targetScore.levelTwo && level === "two"){
-            clearInterval(interval);
-            youLose();
-        } if (score === targetScore.levelThree && level === "three"){
-            clearInterval(interval);
-            winLevelThree();
-        } else if (score !== targetScore.levelThree && level === "three"){
-            clearInterval(interval);
-            youLose();
-        } if (score === targetScore.levelFour && level === "four"){
-            clearInterval(interval);
-            winLevelFour();
-        } else if (score !== targetScore.levelFour && level === "four"){
-            clearInterval(interval);
-            youLose();
-        } if (score === targetScore.levelFive && level === "five"){
-            clearInterval(interval);
-            winLevelFive();
-        } else if (score !== targetScore.levelFive && level === "five"){
-            clearInterval(interval);
-            youLose();
-        } if (score === targetScore.levelSix && level === "six"){
-            clearInterval(interval);
-            winLevelSix();
-        } else if (score !== targetScore.levelSix && level === "six"){
-            clearInterval(interval);
-            youLose();
-        } if (score === targetScore.levelSeven && level === "seven"){
-            clearInterval(interval);
-            winLevelSeven();
-        } else if (score !== targetScore.levelSeven && level === "seven"){
-            clearInterval(interval);
-            youLose();
-          };
-          clearInterval(interval);
-        };
-      }, 1000);
+function clearAllIntervals () {
+  var lastId = setInterval(null, 5000)
+  for (var i=0; i <= lastId; i++) {
+    clearInterval(i)
+  }
 };
 
-var oneMinute = 60,
+function startTimer(duration, display) {
+  clearAllIntervals()
+  timer = duration, minutes, seconds;
+
+     var interval = setInterval(function() {
+      minutes = parseInt(timer / 60, 10);
+      seconds = parseInt(timer % 60, 10);
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+      display.text(minutes + ":" + seconds);
+
+    if (score === 104 && level === "one"){
+      clearInterval(interval);
+      console.log(clearInterval);
+       winLevelOne();
+    } else if (score > 104 && level === "one"){
+      clearInterval(interval);
+      console.log(clearInterval);
+       youLose();
+    } if (score === 168 && level === "two"){
+       winLevelTwo();
+    } else if (score > 168 && level === "two"){
+       youLose();
+    } if (score === 201 && level === "three"){
+       winLevelThree();
+    } else if (score > 201 && level === "three"){
+       youLose();
+    } if (score === 142 && level === "four"){
+       winLevelFour();
+    } else if (score > 142 && level === "four"){
+       youLose();
+    } if (score === 179 && level === "five"){
+       winLevelFive();
+    } else if (score > 179 && level === "five"){
+       youLose();
+    } if (score === 195 && level === "six"){
+       winLevelSix();
+    } else if (score > 195 && level === "six"){
+      youLose();
+    } if (score === 209 && level === "seven"){
+       winLevelSeven();
+    } else if (score > 209 && level === "seven"){
+       youLose();
+    };
+
+    if (--timer < 0) {
+     timer = 0;
+    if (score === targetScore.levelOne && level === "one"){
+        winLevelOne();
+    } else if (score !== targetScore.levelOne && level === "one"){
+        youLose();
+    } if (score === targetScore.levelTwo && level === "two"){
+        winLevelTwo();
+    } else if (score !== targetScore.levelTwo && level === "two"){
+        youLose();
+    } if (score === targetScore.levelThree && level === "three"){
+        winLevelThree();
+    } else if (score !== targetScore.levelThree && level === "three"){
+        youLose();
+    } if (score === targetScore.levelFour && level === "four"){
+        winLevelFour();
+    } else if (score !== targetScore.levelFour && level === "four"){
+        youLose();
+    } if (score === targetScore.levelFive && level === "five"){
+        winLevelFive();
+    } else if (score !== targetScore.levelFive && level === "five"){
+        youLose();
+    } if (score === targetScore.levelSix && level === "six"){
+        winLevelSix();
+    } else if (score !== targetScore.levelSix && level === "six"){
+        youLose();
+    } if (score === targetScore.levelSeven && level === "seven"){
+        winLevelSeven();
+    } else if (score !== targetScore.levelSeven && level === "seven"){
+        youLose();
+      };
+    };
+  }, 1000);
+};
+
 display = $('.timer');
 
-
-
-
-  $('#instructions').show();
+// instructions window
   $('#zero').click(function() {
   $('#instructions').hide();
   levelOne();
 });
 
 //popup level 1
-
 function levelOne(){
   $('#popupOne').show();
   $('#first').click(function() {
-  $('#popupOne').hide();
-  startTimer(60, display);
-  test = [];
-  resetLand();
-  level = "one";
-  score = 0;
-  farm();
-});
+    $('#popupOne').hide();
+    test = [];
+    resetLand();
+    level = "one";
+    score = 0;
+    farm();
+    startTimer(60, display);
+  });
 };
-
-
 
 //When player loses, must restart to Level 1!
 function youLose(){
-  timer = 0;
-  score = 0;
-$('.restartOne').show();
-$('#restart').click(function(){
-  $('.restartOne').hide();
-  test =[];
-  resetLand();
-  farm();
-  levelOne();
-  console.log(startTimer);
-})
-}
+  $('.restartOne').show();
+  $('#restart').click(function(){
+    $('.restartOne').hide();
+    score = 0;
+    levelOne();
+  });
+};
 
 //popup window - level 2
 function winLevelOne() {
   timer = 0;
-$('#popupTwo').show();
-$('#second').click(function() {
-  $('#popupTwo').hide();
-  startTimer(60, display);
-  test = [];
-  resetLand();
-  level = "two";
-  score = 0;
-  farm();
-});
-}
+  $('#popupTwo').show();
+  $('#second').click(function() {
+    $('#popupTwo').hide();
+    startTimer(60, display);
+    test = [];
+    resetLand();
+    level = "two";
+    score = 0;
+    farm();
+  });
+};
 
 function winLevelTwo() {
   timer = 0;
-$('#popupThree').show();
-$('#third').click(function() {
-  $('#popupThree').hide();
-  startTimer(50, display);
-  test = [];
-  resetLand();
-  level = "three";
-  score = 0;
-  farm();
-});
-}
+  $('#popupThree').show();
+  $('#third').click(function() {
+    $('#popupThree').hide();
+    startTimer(50, display);
+    test = [];
+    resetLand();
+    level = "three";
+    score = 0;
+    farm();
+  });
+};
 
 function winLevelThree() {
   timer = 0;
-$('#popupThree').show();
-$('#third').click(function() {
-  $('#popupThree').hide();
-  startTimer(40, display);
-});
-}
+  $('#popupFour').show();
+  $('#four').click(function() {
+    $('#popupFour').hide();
+    startTimer(40, display);
+  });
+};
 
 function winLevelFour() {
   timer = 0;
-$('#popupFour').show();
-$('#four').click(function() {
-  $('#popupFour').hide();
-  startTimer(30, display);
-});
-}
+  $('#popupFive').show();
+  $('#five').click(function() {
+    $('#popupFive').hide();
+    startTimer(30, display);
+  });
+};
 
 function winLevelFive() {
   timer = 0;
-$('#popupFive').show();
-$('#five').click(function() {
-  $('#popupFive').hide();
-  startTimer(25, display);
-});
-}
+  $('#popupSix').show();
+  $('#six').click(function() {
+    $('#popupSix').hide();
+    startTimer(25, display);
+  });
+};
 
 function winLevelSix() {
   timer = 0;
-$('#popupSix').show();
-$('#six').click(function() {
-  $('#popupSix').hide();
-  startTimer(20, display);
-});
-}
+  $('#popupSeven').show();
+  $('#seven').click(function() {
+    $('#popupSeven').hide();
+    startTimer(20, display);
+  });
+};
 
 function winLevelSeven() {
   timer = 0;
-$('#popupWin').show();
-$('#win').click(function() {
-  $('#popupWin').hide();
-  levelOne();
-});
-}
+  $('#popupWin').show();
+  $('#win').click(function() {
+    $('#popupWin').hide();
+    levelOne();
+  });
+};
 
 
 
 
 
-});
+// });
