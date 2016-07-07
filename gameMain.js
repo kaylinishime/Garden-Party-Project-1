@@ -33,29 +33,39 @@ function resetLand(){
 };
 
 
+
 //score points assigned to each vegetable
 var score = 0;
 $('#land').on("click", "span", function(evt){
   if (evt.target.src === apple) {
     score = score + 1;
+    $(this).text("+1").hide(600, removeImg);
   } else if (evt.target.src === snail) {
     score = score - 2;
+    $(this).text("-2").hide(600, removeImg);
   } else if (evt.target.src === strawberry) {
     score = score + 4;
+    $(this).text("+4").hide(600, removeImg);
   } else if (evt.target.src === avocado) {
     score = score + 7;
+    $(this).text("+7").hide(600, removeImg);
   } else if (evt.target.src === watermelon) {
    score = score + 6;
+   $(this).text("+6").hide(600, removeImg);
  } else {
    console.log('no match');
  };
-
-$( evt.target ).hide( 500, function() {
-  $( evt.target ).remove();
-  console.log(score);
-  console.log($('#scorePoints').text(score)); //displays the current score
  });
-});
+
+ var removeImg = function() {
+   $(this).remove();
+   console.log(score);
+   console.log($('#scorePoints').text(score)); //displays the current score
+  };
+
+// $( evt.target ).hide( 500, removeImg);
+
+
 
 var targetScore = {
   levelOne: 104,
