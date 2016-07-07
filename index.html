@@ -14,10 +14,10 @@
   <h1 class="title">Garden Party!</h1>
   <div class="col-md-12">
       <img src="http://i.imgur.com/xuboL0V.jpg" class="picGuide"> = 1</img> <!--apple-->
-      <img src="http://i.imgur.com/XI5oAX7.jpg" class="picGuide"> = 2</img><!--snail-->
-      <img src="http://i.imgur.com/q6fYImz.jpg" class="picGuide"> = 3</img><!--avocado-->
-      <img src="http://i.imgur.com/d3BVON7.jpg" class="picGuide"> = 4</img><!--watermelon-->
-      <img src="http://i.imgur.com/u7GvQkK.jpg" class="picGuide"> = 5</img><!--strawberry-->
+      <img src="http://i.imgur.com/XI5oAX7.jpg" class="picGuide"> = -2</img><!--snail-->
+      <img src="http://i.imgur.com/u7GvQkK.jpg" class="picGuide"> = 4</img><!--strawberry-->
+      <img src="http://i.imgur.com/d3BVON7.jpg" class="picGuide"> = 6</img><!--watermelon-->
+      <img src="http://i.imgur.com/q6fYImz.jpg" class="picGuide"> = 7</img><!--avocado-->
   </div>
 
   <div id="land" class="noSelect" class ="col-md-6">
@@ -131,28 +131,75 @@
 
 
 
+<!--instructions window-->
+  <div id="instructions">
+    <i id="zero" class="fa fa-3x fa-times top-right" aria-hidden="true"></i>
+      <h2>Welcome to Garden Party!</h2>
+        <p>Harvest plants and reach your score goal before the time runs out!</p>
+        <p>Each plant has a different score value, remember snails give you minus -2 points!</p>
+  </div>
+
 <!--level one window-->
-<div id="popupOne">
+<div id="popupOne" style="display: none;">
   <i id="first" class="fa fa-3x fa-times top-right" aria-hidden="true"></i>
     <h2>Level 1: </h2>
-      <p>Score 100 pts</p>
-      <p> Time: 1 min</p>
+      <p>Score 104 pts</p>
+      <p> Time: 1 minute</p>
 </div>
 
 <!--level two window -->
 <div id="popupTwo" style="display: none;">
   <i id="second" class="fa fa-3x fa-times top-right" aria-hidden="true"></i>
     <h2>Level 2: </h2>
-      <p>Score 200 pts</p>
-      <p> Time: 1 min</p>
+      <p>Score 168 pts</p>
+      <p> Time: 1 minute</p>
 </div>
 
 <!--level three window -->
 <div id="popupThree" style="display: none;">
   <i id="third" class="fa fa-3x fa-times top-right" aria-hidden="true"></i>
     <h2>Level 3: </h2>
-      <p>Score 300 pts</p>
-      <p> Time: 1 min</p>
+      <p>Score 201 pts</p>
+      <p> Time: 50 seconds</p>
+</div>
+
+<!--level four window -->
+<div id="popupFour" style="display: none;">
+  <i id="four" class="fa fa-3x fa-times top-right" aria-hidden="true"></i>
+    <h2>Level 4: </h2>
+      <p>Score 142 pts</p>
+      <p> Time: 40 seconds</p>
+</div>
+
+<!--level five window -->
+<div id="popupFive" style="display: none;">
+  <i id="five" class="fa fa-3x fa-times top-right" aria-hidden="true"></i>
+    <h2>Level 5: </h2>
+      <p>Score 179 pts</p>
+      <p> Time: 30 seconds</p>
+</div>
+
+<!--level six window -->
+<div id="popupSix" style="display: none;">
+  <i id="six" class="fa fa-3x fa-times top-right" aria-hidden="true"></i>
+    <h2>Level 6: </h2>
+      <p>Score 195 pts</p>
+      <p> Time: 25 seconds</p>
+</div>
+
+<!--level six window -->
+<div id="popupSeven" style="display: none;">
+  <i id="seven" class="fa fa-3x fa-times top-right" aria-hidden="true"></i>
+    <h2>Level 7: </h2>
+      <p>Score 209 pts</p>
+      <p> Time: 20 seconds</p>
+</div>
+
+<!--Win level seven game complete! -->
+<div id="popupSeven" style="display: none;">
+  <i id="seven" class="fa fa-3x fa-times top-right" aria-hidden="true"></i>
+    <h2>You Win! </h2>
+      <p>play again?</p>
 </div>
 
 <!--restart window-->

@@ -103,7 +103,7 @@ div.noSelect {
   font-size: 100px;
 }
 
-#popupOne, #popupTwo, #popupThree, .restartOne{
+#instructions, #popupOne, #popupTwo, #popupThree, .restartOne{
   position:absolute;
   left:15%;
   top: 20%;
