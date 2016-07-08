@@ -242,7 +242,7 @@ function winLevelThree() {
     startTimer(40, display);
     test = [];
     resetLand();
-    level = "three";
+    level = "four";
     score = 0;
     farm();
   });
@@ -256,7 +256,7 @@ function winLevelFour() {
     startTimer(30, display);
     test = [];
     resetLand();
-    level = "three";
+    level = "five";
     score = 0;
     farm();
   });
@@ -270,7 +270,7 @@ function winLevelFive() {
     startTimer(25, display);
     test = [];
     resetLand();
-    level = "three";
+    level = "six";
     score = 0;
     farm();
   });
@@ -284,7 +284,7 @@ function winLevelSix() {
     startTimer(20, display);
     test = [];
     resetLand();
-    level = "three";
+    level = "seven";
     score = 0;
     farm();
   });
@@ -298,7 +298,6 @@ function winLevelSeven() {
     levelOne();
     test = [];
     resetLand();
-    level = "three";
     score = 0;
     farm();
   });
