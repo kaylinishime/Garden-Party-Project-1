@@ -86,7 +86,7 @@ div.noSelect {
 .timer {
   font-size: 100px;
 }
-#instructions, #popupOne, #popupTwo, #popupThree, .restartOne {
+#instructions, #popupOne, #popupTwo, #popupThree, #popupFour, #popupFive, #popupSix, #popupSeven, #popupWin, .restartOne {
   position: absolute;
   left: 15%;
   top: 20%;
