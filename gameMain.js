@@ -186,6 +186,7 @@ function levelOne() {
   $('#popupOne').show();
   $('#first').click(function() {
     $('#popupOne').hide();
+    $('#scoreOne').show();
     test = [];
     resetLand();
     level = "one";
@@ -199,6 +200,12 @@ function levelOne() {
 function youLose() {
   $('.restartOne').show();
   $('#restart').click(function() {
+    $('#scoreOne').hide();
+    $('#scoreTwo').hide();
+    $('#scoreThree').hide();
+    $('#scoreFour').hide();
+    $('#scoreSix').hide();
+    $('#scoreSeven').hide();
     $('.restartOne').hide();
     score = 0;
     levelOne();
@@ -211,6 +218,8 @@ function winLevelOne() {
   $('#popupTwo').show();
   $('#second').click(function() {
     $('#popupTwo').hide();
+    $('#scoreOne').hide();
+    $('#scoreTwo').show();
     startTimer(60, display);
     test = [];
     resetLand();
@@ -225,6 +234,8 @@ function winLevelTwo() {
   $('#popupThree').show();
   $('#third').click(function() {
     $('#popupThree').hide();
+    $('#scoreTwo').hide();
+    $('#scoreThree').show();
     startTimer(50, display);
     test = [];
     resetLand();
@@ -239,6 +250,8 @@ function winLevelThree() {
   $('#popupFour').show();
   $('#four').click(function() {
     $('#popupFour').hide();
+    $('#scoreThree').hide();
+    $('#scoreFour').show();
     startTimer(40, display);
     test = [];
     resetLand();
@@ -253,6 +266,8 @@ function winLevelFour() {
   $('#popupFive').show();
   $('#five').click(function() {
     $('#popupFive').hide();
+    $('#scoreFour').hide();
+    $('#scoreFive').show();
     startTimer(30, display);
     test = [];
     resetLand();
@@ -267,6 +282,8 @@ function winLevelFive() {
   $('#popupSix').show();
   $('#six').click(function() {
     $('#popupSix').hide();
+    $('#scoreFive').hide();
+    $('#scoreSix').show();
     startTimer(25, display);
     test = [];
     resetLand();
@@ -281,6 +298,8 @@ function winLevelSix() {
   $('#popupSeven').show();
   $('#seven').click(function() {
     $('#popupSeven').hide();
+    $('#scoreSix').hide();
+    $('#scoreSeven').show();
     startTimer(20, display);
     test = [];
     resetLand();
@@ -294,6 +313,7 @@ function winLevelSeven() {
   timer = 0;
   $('#popupWin').show();
   $('#win').click(function() {
+    $('#scoreSeven').hide();
     $('#popupWin').hide();
     levelOne();
     test = [];
