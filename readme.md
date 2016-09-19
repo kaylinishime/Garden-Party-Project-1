@@ -6,6 +6,7 @@ Website: https://kaylinishime.github.io/Garden-Party-Project-1/
 A simple gardening game catered towards younger age groups to practice adding and subtracting. For each level, the user must reach a given score goal before time runs out. 
 
 ## Technologies
+<img src="http://i.imgur.com/vnRcsRj.jpg">
 
 ## Rules
 Each icon has its value when cleared:
