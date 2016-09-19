@@ -1,27 +1,33 @@
-# Garden Friend
+# Garden Party
 
+Website: https://kaylinishime.github.io/Garden-Party-Project-1/
 
+## About
+A simple gardening game catered towards younger age groups to practice adding and subtracting. For each level, the user must reach a given score goal before time runs out. 
 
-Concept:
+## Technologies
 
--pick crops from a plot of land (the screen) by clicking on the crop
--each type of crop will be assigned a certain number of clicks (1-4) in order to be cleared
--objective is to clear as many crops as you can before the time runs out (1 min)
+## Rules
+Each icon has its value when cleared:
 
--each crop has its own value when cleared:
-  -avocado: 1 click - 1 pt
-  -cabbage: 2 click - 2 pts
-  -carrot:  3 click - 3 pts
-  -potato: 4 click - 4 pts
+| Icon       | Points | 
+| ---------- |:------ |
+| Apple      | + 1    |
+| Strawberry | + 4    |
+| Watermelon | + 6    |
+| Avocado    | + 7    |
+| Snail      | - 2    |
 
-- if you pick a vegetable and a Gopher appears, -2 pts.
-- player 1 goes first, next game switches to player 2
-- player with the highest score wins
+There are 7 levels. You must reach the exact score in order to move on to the next level.
 
-Design:
-
--one plot of land (background)
--10 rows, 10 colums of randomized vegetables
--when veggie is clicked, object fades
--start button: initializes clock, and countsdown 1 minute
--score board: displays total number of points as veggies are cleared
+| Level      |  Score | 
+| ---------- |:------ |
+| 1          | 104    |
+| 2          | 168    |
+| 3          | 201    |
+| 4          | 142    |
+| 5          | 179    |
+| 6          | 195    |
+| 7          | 209    |
+## Design
+<img src="http://i.imgur.com/lzpg6Hj.jpg">
